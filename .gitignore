@@ -1,0 +1,16 @@
+# Gradle
+.gradle
+!gradle/wrapper/gradle-wrapper.jar
+build/
+
+# IDE
+.idea
+.vscode
+
+# system
+.DS_Store
+
+# Logs
+/logs
+*.log
+
