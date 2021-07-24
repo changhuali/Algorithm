@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-@DisplayName("剑指Offer07重建二叉树")
+@DisplayName("剑指Offer07重建二叉树解法1")
 class Solution1Test {
 
     @Test

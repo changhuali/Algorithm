@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-@DisplayName("剑指Offer10斐波那契数列")
+@DisplayName("剑指Offer10斐波那契数列解法1")
 class Solution1Test {
 
     @Test

@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-@DisplayName("剑指Offer03数组中重复的数字")
+@DisplayName("剑指Offer03数组中重复的数字解法1")
 class Solution1Test {
 
     @Test

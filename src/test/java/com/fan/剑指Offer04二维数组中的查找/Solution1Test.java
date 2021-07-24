@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-@DisplayName("剑指Offer04二维数组中的查找")
+@DisplayName("剑指Offer04二维数组中的查找解法1")
 class Solution1Test {
 
     @Test
