@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-@DisplayName("剑指Offer11旋转数组的最小数字")
+@DisplayName("剑指Offer11旋转数组的最小数字解法1")
 class Solution1Test {
 
     @Test
