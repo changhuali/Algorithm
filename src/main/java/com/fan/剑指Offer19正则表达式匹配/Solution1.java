@@ -2,25 +2,29 @@ package com.fan.剑指Offer19正则表达式匹配;
 
 class Solution1 {
     public boolean isMatch(String s, String p) {
+        return _isMatch(s, p, 0, 0);
+    }
+
+    private boolean _isMatch(String s, String p, int sk, int pk) {
         int n = s.length(), m = p.length();
-        if (n == 0 && m == 0) return true;
-        if (n > 0 && m == 0) return false;
-        // p[1]是否为*
-        boolean p1IsStar = m > 1 && p.charAt(1) == '*';
-        if (p1IsStar) {
+        if (sk == n && pk == m) return true;
+        if (sk < n && pk == m) return false;
+        // p[pk+1]是否为*
+        boolean star = pk + 1 < m && p.charAt(pk + 1) == '*';
+        if (star) {
             int k = 0;
-            while (k < n && isCharMatch(s.charAt(k), p.charAt(0))) {
+            while (sk + k < n && isCharMatch(s.charAt(sk + k), p.charAt(pk))) {
                 k++;
             }
             while (k >= 0) {
-                if (isMatch(s.substring(k), p.substring(2))) {
+                if (_isMatch(s, p, sk + k, pk + 2)) {
                     return true;
                 }
                 k--;
             }
-        } else if (n != 0) { // n=0，直接返回false
-            if (isCharMatch(s.charAt(0), p.charAt(0))) {
-                return isMatch(s.substring(1), p.substring(1));
+        } else if (sk != n) { // n=0，直接返回false
+            if (isCharMatch(s.charAt(sk), p.charAt(pk))) {
+                return _isMatch(s, p, sk + 1, pk + 1);
             }
         }
         return false;
@@ -28,5 +32,10 @@ class Solution1 {
 
     private boolean isCharMatch(char a, char b) {
         return a == b || b == '.';
+    }
+
+    public static void main(String[] args) {
+        Solution1 solution1 = new Solution1();
+        solution1.isMatch("aaa", "ab*a*c*a");
     }
 }
