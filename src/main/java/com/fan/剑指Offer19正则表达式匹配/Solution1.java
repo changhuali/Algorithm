@@ -34,8 +34,4 @@ class Solution1 {
         return a == b || b == '.';
     }
 
-    public static void main(String[] args) {
-        Solution1 solution1 = new Solution1();
-        solution1.isMatch("aaa", "ab*a*c*a");
-    }
 }
