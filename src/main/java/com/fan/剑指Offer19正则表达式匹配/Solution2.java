@@ -3,7 +3,7 @@ package com.fan.剑指Offer19正则表达式匹配;
 public class Solution2 {
     public boolean isMatch(String s, String p) {
         int n = s.length(), m = p.length();
-        boolean[][] dp = new boolean[n + 1][m+1];
+        boolean[][] dp = new boolean[n + 1][m + 1];
         for(int i = 0; i <= n; i++) {
             dp[i][0] = i == 0;
             for (int j = 1; j <= m; j++) {
