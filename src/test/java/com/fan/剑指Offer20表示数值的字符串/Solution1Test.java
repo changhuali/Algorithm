@@ -1,9 +1,11 @@
 package com.fan.剑指Offer20表示数值的字符串;
 
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+@DisplayName("剑指Offer20表示数值的字符串解法1")
 class Solution1Test {
 
     @Test
