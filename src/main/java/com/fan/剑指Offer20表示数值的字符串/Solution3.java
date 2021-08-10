@@ -10,18 +10,18 @@ public class Solution3 {
         while (end > start && s.charAt(end) == ' ') {
             end--;
         }
-        boolean dot = false, exp = false, digit = false, space = false;
+        boolean dot = false, exp = false, digit = false;
         for (int i = start; i <= end; i++) {
             char c = s.charAt(i);
             if (c == '-' || c == '+') {
-                if (i == start || isE(s.charAt(i - 1)))
+                if (i == start || s.charAt(i - 1) == 'e' || s.charAt(i - 1) == 'E')
                 continue;
             }
             if (c >= '0' && c <= '9') {
                 digit = true;
                 continue;
             }
-            if (isE(c)) {
+            if (c == 'e' || c == 'E') {
                 if (exp || !digit) return false;
                 exp = true;
                 digit = false;
@@ -38,9 +38,4 @@ public class Solution3 {
         }
         return digit;
     }
-
-    private boolean isE(char c) {
-        return c == 'E' || c == 'e';
-    }
-
 }
