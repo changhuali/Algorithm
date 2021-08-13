@@ -10,7 +10,19 @@
 
 `0 <= 节点个数 <= 5000`
 
-**解法1**
+**解法1-遍历链表**
+ 
 
-如果head为null，直接返回null       
-否则从head遍历链表，保存head.next为next，将head.next赋值为新的头节点prev，再将prev赋值为head
+1. 从head遍历链表
+2. 保存head.next为next
+3. 将head.next赋值为新的头节点prev
+4. 再将prev赋值为head
+5. 将next赋值给head继续遍历
+
+**解法2-递归**
+
+利用递归形成的栈反向输出链表节点
+1. 每次递归返回尾节点
+2. 利用head.next获取上一个节点
+3. 将head赋值给head.next.next将head加入链表尾
+4. 将尾节点的next指针指向null
