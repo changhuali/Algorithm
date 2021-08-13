@@ -1,5 +1,7 @@
 package com.fan.剑指Offer.剑指Offer18删除链表的节点;
 
+import com.fan.helpers.ListNode;
+
 public class Solution1 {
     public ListNode deleteNode(ListNode head, int val) {
         if (head == null) return null;

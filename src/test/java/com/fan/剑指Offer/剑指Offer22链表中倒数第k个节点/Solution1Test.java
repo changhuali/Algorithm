@@ -1,5 +1,6 @@
 package com.fan.剑指Offer.剑指Offer22链表中倒数第k个节点;
 
+import com.fan.helpers.ListNode;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
