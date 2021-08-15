@@ -29,3 +29,7 @@
 `0 <= 节点个数 <= 1000`
 
 注意：本题与主站 226 题相同：https://leetcode-cn.com/problems/invert-binary-tree/
+
+**解法1-DFS**
+
+将节点左右子节点互换并递归处理左右子节点。

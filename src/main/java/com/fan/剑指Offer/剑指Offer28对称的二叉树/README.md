@@ -36,3 +36,10 @@
 `0 <= 节点个数 <= 1000`
 
 注意：本题与主站 101 题相同：https://leetcode-cn.com/problems/symmetric-tree/
+
+**解法1-DFS**
+
+对称二叉树满足下列条件：
+1. L.val == R.val
+2. L.left.val == R.right.val
+3. L.right.val == R.left.val
