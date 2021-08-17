@@ -17,3 +17,9 @@
 - `0 <= matrix[i].length <= 100`
 
 注意：本题与主站 54 题相同：https://leetcode-cn.com/problems/spiral-matrix/
+
+**解法1**
+
+用left，top，right，bottom四个变量标识矩阵边界，然后依次按向右、下、左、上四个方向遍历矩阵
+
+- 当坐标回到起点时，left++，top++，right--，bottom--
