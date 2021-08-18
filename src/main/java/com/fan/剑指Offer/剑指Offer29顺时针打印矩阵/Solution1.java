@@ -4,7 +4,9 @@ import java.util.Arrays;
 
 public class Solution1 {
     public int[] spiralOrder(int[][] matrix) {
-        if (matrix == null || matrix.length == 0 || matrix[0].length == 0) return new int[0];
+        if (matrix == null || matrix.length == 0 || matrix[0].length == 0) {
+            return new int[0];
+        }
 
         int left = 0;
         int top = 0;
