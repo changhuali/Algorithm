@@ -22,3 +22,7 @@ push(5), pop() -> 5, pop() -> 3, pop() -> 2, pop() -> 1
 2. `pushed 是 popped 的排列。`
 
 注意：本题与主站 946 题相同：https://leetcode-cn.com/problems/validate-stack-sequences/
+
+**解法1**
+
+将pushed序列依次入栈，并在每个元素入栈后比较入栈元素和popped[i]是否相等，若相等则出栈，然后i++，若栈不为空，继续上一步操作，若不等，则继续入栈
