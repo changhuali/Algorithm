@@ -25,3 +25,8 @@
 1. `节点总数 <= 1000`
 
 注意：本题与主站 102 题相同：https://leetcode-cn.com/problems/binary-tree-level-order-traversal/
+
+**解法1**
+
+- BFS访问二叉树
+- 每次将队列所有节点全部出队，同时将子节点入队
