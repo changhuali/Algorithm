@@ -15,25 +15,21 @@ public class Solution1 {
         }
         int level = 0;
         while (!queue.isEmpty()) {
-            List<Integer> subList = new LinkedList<>();
+            LinkedList<Integer> subList = new LinkedList<>();
             for (int i = queue.size(); i > 0; i--) {
                 TreeNode curr = queue.poll();
-                subList.add(curr.val);
-                if (level % 2 == 0) {
-                    if (curr.left != null) {
-                        queue.add(curr.right);
-                    }
-                    if (curr.right != null) {
-                        queue.add(curr.left);
-                    }
-                } else  {
-                    if (curr.left != null) {
-                        queue.add(curr.left);
-                    }
-                    if (curr.right != null) {
-                        queue.add(curr.right);
-                    }
+                if ((level & 1) == 0) {
+                    subList.add(curr.val);
+                } else {
+                    subList.addFirst(curr.val);
                 }
+                if (curr.left != null) {
+                    queue.add(curr.left);
+                }
+                if (curr.right != null) {
+                    queue.add(curr.right);
+                }
+
             }
             list.add(subList);
             level++;
